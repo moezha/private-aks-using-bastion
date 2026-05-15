@@ -99,3 +99,5 @@ terraform destroy
 
 - output.tf: Useful output variables (Resource Group name, VM ID).
 
+![alt text](<images/Capture d'écran 2026-05-15 023859.png>)
+![alt text](<images/Capture d'écran 2026-05-15 023906.png>)
