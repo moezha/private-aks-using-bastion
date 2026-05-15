@@ -28,7 +28,7 @@ override.tf.json
 *.tfplan
 *.plan
 *.cache
-
+*.hcl
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
