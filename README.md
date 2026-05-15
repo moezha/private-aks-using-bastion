@@ -39,13 +39,13 @@ az extension add --name ssh
 ```
 Get the Resource ID of your Jumpbox VM:
 ```bash
-VM_ID=$(az vm show -g rg-private-aks-bastion-260 -n vm-linux-jumpbox --query id -o tsv)
+VM_ID=$(az vm show -g private-aks-using-bastion-moez -n vm-linux-jumpbox --query id -o tsv)
 ```
 Connect securely:
 ```bash
 az network bastion ssh \
   --name "bastion" \
-  --resource-group "rg-private-aks-bastion-260" \
+  --resource-group "private-aks-using-bastion-moez" \
   --target-resource-id $VM_ID \
   --auth-type "ssh-key" \
   --username "azureuser" \
@@ -69,7 +69,7 @@ Once connected to the Jumpbox terminal, run the following commands to authentica
 az login --identity
 
 # Fetch the kubeconfig for the private cluster
-az aks get-credentials -g rg-private-aks-bastion-260 -n aks-cluster
+az aks get-credentials -g private-aks-using-bastion-moez -n aks-cluster
 
 # Verify connection to the API server
 kubectl get nodes
